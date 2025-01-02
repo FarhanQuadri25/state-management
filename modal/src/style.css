@@ -1,0 +1,100 @@
+/* import inter fonts and poppins */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 20px;
+  border: none;
+  background-color: crimson;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
+  display: block;
+  border-radius: 14px;
+  cursor: pointer;
+  margin: 1em auto;
+}
+
+.btn {
+  background-color: #171717;
+  margin: 0.7em 0;
+}
+
+dialog {
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  color: #171717;
+  border: 2px solid #171717;
+  opacity: 0;
+  transition: all 0.3s allow-discrete;
+}
+
+dialog[open] {
+  opacity: 1;
+}
+
+@starting-style {
+  dialog[open] {
+    opacity: 0;
+  }
+}
+
+dialog::backdrop {
+  /* background: none; */
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s allow-discrete;
+}
+
+dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@starting-style {
+  dialog[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.description {
+  max-width: 40ch;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #d6c9c935;
+  border-top: 5px solid #524dff;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  margin: 1em auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
